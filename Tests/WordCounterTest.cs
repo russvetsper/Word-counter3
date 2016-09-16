@@ -20,6 +20,17 @@ namespace WordCounter
         Assert.Equal(2, testCounter.CountRepeats());
       }
 
-      
+    [Fact]
+      public void Test3_Comapring_wordRedToMyCarIsRed_1()
+      {
+      RepeatCounter testCounter = new RepeatCounter("red","my car is red");
+      Assert.Equal(1, testCounter.CountRepeats());
+      }
+
+
+
+
+
+
   }
 }
