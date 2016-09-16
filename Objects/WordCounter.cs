@@ -52,13 +52,13 @@ namespace WordCounter
       }
       int count = 0;
       foreach (string wordToFind in stringToSearch)
-       {
-         if (wordToFind == newWordToFind)
-         {
-           count++;
-         }
-       }
-          return count;
+      {
+        if (wordToFind == newWordToFind)
+        {
+          count++;
+        }
+      }
+      return count;
 
 
     }
