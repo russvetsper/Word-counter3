@@ -27,7 +27,12 @@ namespace WordCounter
       Assert.Equal(1, testCounter.CountRepeats());
       }
 
-
+    [Fact]
+    public void Test4_Comapring_letterAToLetterC_0()
+    {
+    RepeatCounter testCounter = new RepeatCounter("a","c");
+    Assert.Equal(0, testCounter.CountRepeats());
+    }
 
 
 
