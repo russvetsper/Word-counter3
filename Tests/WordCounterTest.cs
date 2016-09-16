@@ -34,7 +34,18 @@ namespace WordCounter
     Assert.Equal(0, testCounter.CountRepeats());
     }
 
+    //another way to test for true or fals
 
+    [Fact]
+    public void Get5_TwoWordsMatchInPhrase_true()
+    {
+      string wordToFind = "super";
+      string stringToSearch = "super super fun";
+      RepeatCounter testNewWord = new RepeatCounter(wordToFind,stringToSearch);
+      int count = testNewWord.CountRepeats();
+
+      Assert.Equal(2, count);
+    }
 
 
   }
