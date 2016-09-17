@@ -1,5 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Content/styles.css" >
+    <h1>Results!<h1>
 
-<h1 align="center" >Word "@Model.GetWordToFind()"<br>Sentence "@Model.GetStringToSearch()"</h1>
-<br>
-<br>
-<h2>Reasult is : @Model.CountRepeats()</h2>
+  </head>
+
+  <body>
+    <h2 class="jumbotron" align="center" >
+      Word Entered: <div>@Model.GetWordToFind()</div> <br> <br>
+      Sentence Entered: <div> @Model.GetStringToSearch()</div>
+    </h2>
+
+
+    <h2 class="jumbotron">Reasult is: @Model.CountRepeats()</h2>
+
+  </body>
+</html>
