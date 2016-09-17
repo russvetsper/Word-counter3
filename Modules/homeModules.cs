@@ -1,4 +1,6 @@
 using Nancy;
+using System;
+using WordCounter;
 
 namespace WordCounter
 {
@@ -6,12 +8,17 @@ namespace WordCounter
   {
     public HomeModule()
     {
-      Get["/"] = _ =>
-      View["index.cshtml"];
+      Get["/"] = _ =>{
+          return View["index.cshtml"];
+       };
+     Post["/results"] = _ => {
+       RepeatCounter checkWord = new RepeatCounter (
+         Request.Form["word"],
+         Request.Form["sentence"]
+       );
+       return View["results.cshtml", checkWord];
+     };
 
-
-    }
-
-
-  }
+   }
+ }
 }
