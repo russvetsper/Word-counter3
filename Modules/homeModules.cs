@@ -9,16 +9,16 @@ namespace WordCounter
     public HomeModule()
     {
       Get["/"] = _ =>{
-          return View["index.cshtml"];
-       };
-     Post["/results"] = _ => {
-       RepeatCounter checkWord = new RepeatCounter (
-         Request.Form["word"],
-         Request.Form["sentence"]
-       );
-       return View["results.cshtml", checkWord];
-     };
+        return View["index.cshtml"];
+      };
+      Post["/results"] = _ => {
+        RepeatCounter checkWord = new RepeatCounter (
+        Request.Form["word"],
+        Request.Form["sentence"]
+        );
+        return View["results.cshtml", checkWord];
+      };
 
-   }
- }
+    }
+  }
 }
